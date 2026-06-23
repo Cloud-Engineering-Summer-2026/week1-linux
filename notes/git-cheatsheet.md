@@ -1,3 +1,44 @@
+# Git Workflow Cheat Sheet
+
+## Daily Workflow
+git status                   # what has changed?
+git add <file>               # stage a specific file
+git add .                    # stage everything
+git commit -m "type: msg"    # commit with message
+git push                     # push to GitHub
+
+## Branch Workflow
+git switch -c feature/name     # create and switch to new branch
+git branch                     # list branches (* = current)
+git checkout main              # switch back to main
+git pull                       # pull latest changes from GitHub
+git branch -d feature/name     # delete branch after merging
+
+## Pull Requests
+# Always done on GitHub, not the terminal
+# Title should match the issue it closes
+# Use "closes #N" in commit or PR description to auto-close issue
+
+## Commit Message Types
+feat:      new feature or script
+fix:       bug fix
+docs:      notes, README, documentation only
+refactor:  restructured code, same behaviour
+chore:     cleanup, config
+style:	   Changes that do not affect the meaning of the code (whitespace, formatting, missing semi-colons).
+
+## Useful Commands
+git log --oneline            # clean commit history
+git diff                     # see unstaged changes
+git diff --staged            # see staged changes
+git stash                    # temporarily save uncommitted work
+git stash pop                # bring stashed work back
+
+## Undoing Things
+git restore <file>           # discard unstaged changes to a file
+git reset HEAD <file>        # unstage a file
+git revert <commit-hash>     # undo a commit safely (keeps history)
+
 ## Line Ending Issues (Windows/Linux — CRLF vs LF)
 
 ### The Problem
